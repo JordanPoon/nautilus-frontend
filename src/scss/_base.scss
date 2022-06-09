@@ -1,0 +1,367 @@
+// Base
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+body {
+  padding: 0;  
+  margin: 0;
+  color: var(--base-txt-color);
+  font-family: var(--base-font-family);
+  font-weight: 300;
+  background: var(--body-bg);
+  height: 100vh;
+}
+
+
+// headings ------------
+h1,h2,h3,h5,h6 {
+  margin: 0 0 .5em;
+  color: var(--heading-color);
+}
+
+// links ---------------
+a {
+  color: var(--link-color);
+}
+
+
+// app splash screen -------
+.app-splash {
+  position: fixed;
+  background: #fff;
+  color: #777;
+  display: flex;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .app-logo {
+    width: 180px;
+    display: block;
+    margin-bottom: 3em;
+  }
+}
+
+
+// helper classes ---------
+.calign {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.large-text {
+  font-size: 1.6em;
+}
+
+.brand-color {
+  color: var(--brand-color);
+}
+
+// generic-entry ------------
+.generic-entry {
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.07);
+  border-radius: 5px;
+  margin-bottom: .5em;
+  padding: 1em;
+  background: #fff;
+}
+
+// root ---------------
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+  overflow: hidden;
+}
+
+// page --------------------
+.page-content {
+  position: absolute;
+  top: var(--app-header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  // padding: 2em;
+  &.no-pad {
+    padding: 0;
+  }
+}
+
+.page-centered {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // text-align: center;
+  top: 0;
+  
+}
+
+
+// sign in + sign up pages ----------
+.signinup-box,
+.signup-box {  
+  max-width: 320px;
+  text-align: center;
+}
+
+.signinup-logo {
+  width: 200px;
+  margin-bottom: 1em;
+}
+
+.sign-in-btn {
+  margin-top: 2vh;
+}
+
+.sign-in {
+  width: 50vw;
+  margin: 4vh 8vw 8vh 8vw;
+}
+
+.sign-in-text {
+  margin-bottom: 6vh;
+}
+
+.sign-in-img-box {
+  width: 50vw;
+  height: 100vh;
+}
+
+.sign-in-img {
+  height: 100%;
+  width: 50vw;
+  object-fit: cover;
+}
+
+.nautilus-icon {
+  width: 50px;
+}
+
+.nautilus-title {
+  margin: 1em 1em 1em 0.5em;
+}
+
+.nautilus-logo {
+  margin-bottom: 4em;
+}
+
+// guide page ---------------
+.guide-step {
+  // padding: 1em;
+  margin: 2em 5em 2em 0em;
+  width: 50vw;
+  img {
+    width: 100%;
+  }
+}
+
+.guide-row {
+  display: flex;
+}
+
+.guide-content {
+  margin: 3em 0em 3em 5em;
+}
+
+// alerts view
+
+.alerts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0em 0em 0em 3em;
+  height: 45vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  .alerts-card {
+    display: block;
+    width: calc(100% - 1em);
+    margin: 0.5em;
+    
+    
+    .alert-icon {
+      float: left;
+      display: flex;
+      margin: 0em 2em 0em 0em;
+      
+      
+    }
+    .alert-content {
+      display: flex;
+      
+    }
+    .alert-title-date {
+      display: block;
+      width: 24em;
+    }
+    .alert-description{
+      font-weight: 400;
+      display: flex;
+      padding: 1em 0em 1em 0em;
+      text-align: left;
+      width: 30vw;
+      
+    }
+    .remove-icon {
+      padding: 0.6em 0em 0.6em 0em;
+    }  
+  }
+  
+}
+
+.alerts-grid::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.alerts-grid::-webkit-scrollbar-thumb {
+  background-color: #D8D8D8;
+}
+
+.alerts-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 3em 0em 0em 3em;
+
+}
+
+
+// sensors
+
+.sensor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em 0em 3em 3em;
+
+  .sensor {
+    
+    margin: 0.5em;
+
+    
+  }
+
+  .sensor-triggered {
+    color: orange;
+
+    
+  }
+
+  .sensor-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: #808E92;
+    margin-top: 0.5em;
+    justify-content: center;
+  }
+
+  
+  
+
+
+}
+
+.sensor-icon {
+  opacity: 0.9;
+}
+
+
+.sensor-dialog::part(body) {
+  margin-top: -4em;
+  text-align: center;
+  
+  
+}
+
+.sensor:hover .sensor-icon { 
+  transform: scale(1.1);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.sensor-spinner {
+  margin: 2vw;
+}
+
+//vessel details
+
+.right-side-menu {
+  float: right;
+  width: 350px;
+  margin: 3em;
+}
+
+.vessel-profile-image {
+  width: 100px;
+  border-radius: 1em;
+}
+
+.vessel-details {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.vessel-details-text {
+  padding-left: 20px;
+}
+
+.admin-page {
+  margin: 3em 0em 0em 3em;
+}
+
+// admin - send alert
+
+.send-alert-graphic {
+  margin: 0em 50vw 3em 0em;
+}
+
+.progress-bar {
+  width: 50vw;
+  margin: 1em 0em 3em 0em;
+}
+
+.send-alert-graph {
+  margin-right: 0vw;
+}
+
+.laptop-icon {
+  float: right;
+  margin-right: 47vw;
+
+}
+
+.vessel-image-admin {
+  width: 70px;
+  border-radius: 1em;
+  margin-right: 1em;
+}
+
+.send-alert-btn {
+  margin-top: 2em;
+}
+
+//profile
+
+.edit-profile {
+  margin: 3em;
+}
+
+
+// RESPONSIVE - MOBILE -------------------
+@media all and (max-width: 768px){ 
+
+  
+}

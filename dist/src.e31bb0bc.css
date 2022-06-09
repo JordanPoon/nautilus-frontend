@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,500;1,100;1,200;1,500&display=swap");
+:root {
+  --base-txt-color: #222;
+  --heading-color: #333;
+  --base-font-family: "Work Sans", sans-serif;
+  --body-bg: #fff;
+  --brand-color: #018793;
+  --link-color: --brand-color;
+  --app-header-height: 60px;
+  --app-header-txt-color: #fff;
+  --app-header-title-font-size: 1.6em;
+  --sl-color-primary-50: #f4f4f4;
+  --sl-color-primary-100: #62f1fe;
+  --sl-color-primary-200: #2fedfe;
+  --sl-color-primary-300: #02e4f8;
+  --sl-color-primary-400: #01b6c6;
+  --sl-color-primary-500: #018793;
+  --sl-color-primary-600: #015860;
+  --sl-color-primary-700: #002a2e;
+  --sl-color-primary-800: black;
+  --sl-color-primary-900: black;
+  --sl-focus-ring-color-primary: rgba(1, 135, 147, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--base-txt-color);
+  font-family: var(--base-font-family);
+  font-weight: 300;
+  background: var(--body-bg);
+  height: 100vh;
+}
+
+h1, h2, h3, h5, h6 {
+  margin: 0 0 0.5em;
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+.app-splash {
+  position: fixed;
+  background: #fff;
+  color: #777;
+  display: flex;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.app-splash .app-logo {
+  width: 180px;
+  display: block;
+  margin-bottom: 3em;
+}
+
+.calign {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.large-text {
+  font-size: 1.6em;
+}
+
+.brand-color {
+  color: var(--brand-color);
+}
+
+.generic-entry {
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  background: #fff;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.page-content {
+  position: absolute;
+  top: var(--app-header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+}
+.page-content.no-pad {
+  padding: 0;
+}
+
+.page-centered {
+  display: flex;
+  top: 0;
+}
+
+.signinup-box,
+.signup-box {
+  max-width: 320px;
+  text-align: center;
+}
+
+.signinup-logo {
+  width: 200px;
+  margin-bottom: 1em;
+}
+
+.sign-in-btn {
+  margin-top: 2vh;
+}
+
+.sign-in {
+  width: 50vw;
+  margin: 4vh 8vw 8vh 8vw;
+}
+
+.sign-in-text {
+  margin-bottom: 6vh;
+}
+
+.sign-in-img-box {
+  width: 50vw;
+  height: 100vh;
+}
+
+.sign-in-img {
+  height: 100%;
+  width: 50vw;
+  object-fit: cover;
+}
+
+.nautilus-icon {
+  width: 50px;
+}
+
+.nautilus-title {
+  margin: 1em 1em 1em 0.5em;
+}
+
+.nautilus-logo {
+  margin-bottom: 4em;
+}
+
+.guide-step {
+  margin: 2em 5em 2em 0em;
+  width: 50vw;
+}
+.guide-step img {
+  width: 100%;
+}
+
+.guide-row {
+  display: flex;
+}
+
+.guide-content {
+  margin: 3em 0em 3em 5em;
+}
+
+.alerts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0em 0em 0em 3em;
+  height: 45vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.alerts-grid .alerts-card {
+  display: block;
+  width: calc(100% - 1em);
+  margin: 0.5em;
+}
+.alerts-grid .alerts-card .alert-icon {
+  float: left;
+  display: flex;
+  margin: 0em 2em 0em 0em;
+}
+.alerts-grid .alerts-card .alert-content {
+  display: flex;
+}
+.alerts-grid .alerts-card .alert-title-date {
+  display: block;
+  width: 24em;
+}
+.alerts-grid .alerts-card .alert-description {
+  font-weight: 400;
+  display: flex;
+  padding: 1em 0em 1em 0em;
+  text-align: left;
+  width: 30vw;
+}
+.alerts-grid .alerts-card .remove-icon {
+  padding: 0.6em 0em 0.6em 0em;
+}
+
+.alerts-grid::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.alerts-grid::-webkit-scrollbar-thumb {
+  background-color: #D8D8D8;
+}
+
+.alerts-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 3em 0em 0em 3em;
+}
+
+.sensor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em 0em 3em 3em;
+}
+.sensor-grid .sensor {
+  margin: 0.5em;
+}
+.sensor-grid .sensor-triggered {
+  color: orange;
+}
+.sensor-grid .sensor-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: #808E92;
+  margin-top: 0.5em;
+  justify-content: center;
+}
+
+.sensor-icon {
+  opacity: 0.9;
+}
+
+.sensor-dialog::part(body) {
+  margin-top: -4em;
+  text-align: center;
+}
+
+.sensor:hover .sensor-icon {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.sensor-spinner {
+  margin: 2vw;
+}
+
+.right-side-menu {
+  float: right;
+  width: 350px;
+  margin: 3em;
+}
+
+.vessel-profile-image {
+  width: 100px;
+  border-radius: 1em;
+}
+
+.vessel-details {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.vessel-details-text {
+  padding-left: 20px;
+}
+
+.admin-page {
+  margin: 3em 0em 0em 3em;
+}
+
+.send-alert-graphic {
+  margin: 0em 50vw 3em 0em;
+}
+
+.progress-bar {
+  width: 50vw;
+  margin: 1em 0em 3em 0em;
+}
+
+.send-alert-graph {
+  margin-right: 0vw;
+}
+
+.laptop-icon {
+  float: right;
+  margin-right: 47vw;
+}
+
+.vessel-image-admin {
+  width: 70px;
+  border-radius: 1em;
+  margin-right: 1em;
+}
+
+.send-alert-btn {
+  margin-top: 2em;
+}
+
+.edit-profile {
+  margin: 3em;
+}
+
+.input-group {
+  margin-bottom: 2em;
+}
+
+.page-form {
+  max-width: 50vw;
+}
+
+sl-dialog::part(title) {
+  font-weight: 500;
+  font-size: 1.6em;
+}
+
+@media all and (max-width: 768px) {
+  sl-dialog::part(panel) {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    max-width: none;
+  }
+}
+#toasts {
+  position: fixed;
+  left: 50%;
+  top: 1em;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.toast-entry {
+  background: #fff;
+  margin: 0 auto;
+  color: #333;
+  border-radius: 200px;
+  box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.14);
+  padding: 0.7em 1.3em;
+  font-size: 1em;
+  margin-bottom: 0.25em;
+  text-align: center;
+  transition: all 0.2 ease;
+}
+.toast-entry.is-error {
+  background: #d4195d;
+  color: #fff;
+}
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
